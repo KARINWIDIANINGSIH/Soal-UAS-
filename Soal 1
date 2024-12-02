@@ -1,0 +1,20 @@
+# Hukum Hooke --> F = -k * x
+import numpy as np
+import matplotlib.pyplot as plt  # Perbaikan import
+
+k = 60  # N/m (konstanta pegas)
+
+# Rentang posisi x
+x = np.arange(0, 0.5, 0.02)  # dari 0 hingga 0.5 meter dengan langkah 0.02
+
+# Gaya F berdasarkan Hukum Hooke
+F = -k * x  # F(x) = -k * x
+
+# Plot grafik
+plt.plot(x, F, color="pink", linestyle="-", label="F = -k * x")  
+plt.xlabel("Posisi x (m)")
+plt.ylabel("Gaya F(x) (N)")
+plt.title("Grafik Persamaan Hukum Hooke")  
+plt.legend()
+plt.grid()
+plt.show()
